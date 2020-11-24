@@ -1,0 +1,119 @@
+# Symbols in the grammar are case-sensitive.
+# 
+# This grammar uses a convention that
+#    - terminals are lowercase          (president)
+#    - preterminals are capitalized     (Noun)
+#    - other nonterminals are all-caps  (NP)
+# 
+# This convention just makes grammars more readable to humans.  Thus:
+#
+#    - When *you* are writing grammars in questions 3 and 6, you should 
+#      follow this convention unless you have a good reason not to.  
+#
+#    - But your *program* should still work with grammars that don't
+#      follow this convention.  So how can your program reliably tell
+#      the difference between terminal and nonterminal symbols?  If
+#      there is at least one rule for rewriting a symbol, then that
+#      symbol is a nonterminal and should be rewritten.
+#######################
+
+# Rules for creating full sentences.
+
+1	ROOT	S
+
+1	S	NP RC VP
+1	S	NPp RCp VPp
+
+
+1	NP	Det Noun_s
+
+1	NPp	Det Noun_p
+
+1	VPp	are Adj
+1	VP	is Adj
+
+1	RC	that RC_Verb NP
+
+1	RCp	that RC_Verb_p NPp
+
+
+
+# Vocabulary.
+
+1	Noun_s	boy
+1	Noun_s	girl
+1	Noun_s	man
+1	Noun_s	woman
+1	Noun_s	guy
+1	Noun_s	doctor
+1	Noun_s	artist
+1	Noun_s	robot
+1	Noun_s	person
+1	Noun_s	painter
+1	Noun_s	cop
+1	Noun_s	student
+1	Noun_s	teacher
+1	Noun_s	lawyer
+1	Noun_s	peasant
+1	Noun_s	chef
+1	Noun_s	pilot
+1	Noun_s	athlete
+1	Noun_s	farmer
+1	Noun_s	rabbit
+1	Noun_s	duck
+1	Noun_s	dog
+1	Noun_s	cat
+1	Noun_s	rat
+1	Noun_s	frog
+
+1	Noun_p	boys
+1	Noun_p	girls
+1	Noun_p	men
+1	Noun_p	women
+1	Noun_p	guys
+1	Noun_p	doctors
+1	Noun_p	artists
+1	Noun_p	robots
+1	Noun_p	people
+1	Noun_p	painters
+1	Noun_p	cops
+1	Noun_p	students
+1	Noun_p	teachers
+1	Noun_p	lawyers
+1	Noun_p	peasants
+1	Noun_p	chefs
+1	Noun_p	pilots
+1	Noun_p	athletes
+1	Noun_p	farmers
+1	Noun_p	rabbits
+1	Noun_p	ducks
+1	Noun_p	dogs
+1	Noun_p	cats
+1	Noun_p	rats
+1	Noun_p	frogs
+
+
+1	Adj ugly
+1	Adj pretty
+1	Adj old
+1	Adj big
+1	Adj small
+1	Adj large
+1	Adj cold
+
+
+1	Det	the
+
+1	RC_Verb	sees
+1	RC_Verb	hears
+1	RC_Verb smells
+1	RC_Verb likes
+
+
+1	RC_Verb_p see
+1	RC_Verb_p hear
+1	RC_Verb_p smell
+1	RC_Verb_p like
+
+
+
