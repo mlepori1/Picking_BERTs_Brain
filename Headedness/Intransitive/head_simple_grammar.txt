@@ -1,0 +1,65 @@
+# Symbols in the grammar are case-sensitive.
+# 
+# This grammar uses a convention that
+#    - terminals are lowercase          (president)
+#    - preterminals are capitalized     (Noun)
+#    - other nonterminals are all-caps  (NP)
+# 
+# This convention just makes grammars more readable to humans.  Thus:
+#
+#    - When *you* are writing grammars in questions 3 and 6, you should 
+#      follow this convention unless you have a good reason not to.  
+#
+#    - But your *program* should still work with grammars that don't
+#      follow this convention.  So how can your program reliably tell
+#      the difference between terminal and nonterminal symbols?  If
+#      there is at least one rule for rewriting a symbol, then that
+#      symbol is a nonterminal and should be rewritten.
+#######################
+
+# Rules for creating full sentences.
+
+1	ROOT	S
+
+1	S	Det Noun Verb
+
+
+# Vocabulary.
+
+1	Noun	doctor
+1	Noun	lawyer
+1	Noun	person
+1	Noun	dancer
+1	Noun	painter
+1	Noun	cop
+1	Noun	politician
+1	Noun	student
+1	Noun	teacher
+1	Noun	farmer
+
+1	Det	the
+1	Det	a
+
+
+1	Verb	talks
+1	Verb	swims
+1	Verb	walks
+1	Verb	screams
+1	Verb	fights
+1	Verb	hides
+1	Verb	eats
+1	Verb	runs
+1	Verb	thinks
+1	Verb	works
+
+
+1	Adj scary
+1	Adj young
+1	Adj happy
+1	Adj sad
+1	Adj short
+1	Adj tall
+1	Adj fat
+1	Adj skinny
+1	Adj mean
+1	Adj nice
