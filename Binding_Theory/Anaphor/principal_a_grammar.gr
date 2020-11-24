@@ -1,0 +1,82 @@
+# Symbols in the grammar are case-sensitive.
+# 
+# This grammar uses a convention that
+#    - terminals are lowercase          (president)
+#    - preterminals are capitalized     (Noun)
+#    - other nonterminals are all-caps  (NP)
+# 
+# This convention just makes grammars more readable to humans.  Thus:
+#
+#    - When *you* are writing grammars in questions 3 and 6, you should 
+#      follow this convention unless you have a good reason not to.  
+#
+#    - But your *program* should still work with grammars that don't
+#      follow this convention.  So how can your program reliably tell
+#      the difference between terminal and nonterminal symbols?  If
+#      there is at least one rule for rewriting a symbol, then that
+#      symbol is a nonterminal and should be rewritten.
+#######################
+
+# Rules for creating full sentences.
+
+1	ROOT	S
+
+1	S	the Noun Verb_1 that the Noun Verb_2 Anaphor
+#1	S	the Adj Noun Verb_1 that the Noun Verb_2 Anaphor 
+#1	S	the Noun Verb_1 that the Adj Noun Verb_2 Anaphor 
+#1	S	the Adj Noun Verb_1 that the Adj Noun Verb_2 Anaphor 
+
+ 
+
+
+# Vocabulary.
+
+1	Noun	doctor
+1	Noun	artist
+1	Noun	robot
+1	Noun	person
+1	Noun	dancer
+1	Noun	painter
+1	Noun	cop
+1	Noun	politician
+1	Noun	student
+1	Noun	teacher
+1	Noun	farmer
+1	Noun	banker
+1	Noun	lawyer
+1	Noun	peasant
+1	Noun	chef
+1	Noun	pilot
+1	Noun	athlete
+1	Noun	fairy
+1	Noun	monster
+1	Noun	alien
+1	Noun	ghost
+1	Noun	vampire
+1	Noun	mummy
+
+
+1	Verb_1	thinks
+1	Verb_1	believes
+1	Verb_1	understands
+1	Verb_1	hopes
+
+1	Verb_2	likes
+1	Verb_2	loves
+1	Verb_2	hates
+1	Verb_2	accepts
+1	Verb_2	scares
+
+1	Adj old
+1	Adj young
+1	Adj nice
+1	Adj happy
+1	Adj sad
+1	Adj rich
+1	Adj poor
+
+
+
+1	Anaphor	herself
+1	Anaphor	himself
+
