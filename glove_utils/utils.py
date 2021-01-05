@@ -30,7 +30,6 @@ def create_embedding_dictionary(emb_file, f_dim, filler_to_index, index_to_fille
 			weights_matrix[i] = np.ones((f_dim,))
 
 		else:
-			print('fuuuck')
 			print(word)
 			if unseen_words == "random":
 				weights_matrix[i] = np.random.normal(scale=0.6, size=(f_dim,))
